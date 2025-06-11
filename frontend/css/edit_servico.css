@@ -7,10 +7,6 @@ input::-webkit-outer-spin-button {
   margin: 0;
 }
 
-input[type="number"] {
-  -moz-appearance: textfield; /* Para Firefox */
-}
-
 /* Estilo geral do corpo da página (aplicado a páginas com formulário) */
 body {
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
