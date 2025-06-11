@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor Tornearia</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <form id="form-servico">
+        <h1>NOVA ORDEM DE SERVIÇO</h1>
+
+        <div class="form-group">
+            <label for="cliente">CLIENTE</label>
+            <select name="cliente" id="cliente" required>
+                <option value="">Selecione o Cliente</option>
+                <option value="Empresa Gamma">Empresa Gamma</option>
+                <option value="Outro Cliente">Outro Cliente</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="servico">SERVIÇO</label>
+            <select name="servico" id="servico" required>
+                <option value="">Selecione o Serviço</option>
+                <option value="Fresagem de peça">Fresagem de peça</option>
+                <option value="Torneamento">Torneamento</option>
+                <option value="Soldagem">Soldagem</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="data">DATA</label>
+            <input type="date" name="data" id="data" required />
+        </div>
+
+        <div class="form-group">
+            <label for="status">STATUS</label>
+            <select name="status" id="status" required>
+                <option value="">Selecione o status</option>
+                <option value="Aberta">Aberta</option>
+                <option value="Pendente">Pendente</option>
+                <option value="Em andamento">Em andamento</option>
+                <option value="Concluído">Concluído</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="valorServico">VALOR DO SERVIÇO</label>
+            <input type="number" name="valorServico" id="valorServico" placeholder="0.00" step="0.01" />
+        </div>
+
+        <div class="form-group">
+            <label for="gasto">GASTO</label>
+            <input type="number" name="gasto" id="gasto" placeholder="0.00" step="0.01" />
+        </div>
+
+        <button type="submit">CRIAR OS</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
