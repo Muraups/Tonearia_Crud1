@@ -1,4 +1,6 @@
 // backend/server.js
+import path from 'path'; // No topo do arquivo
+import { fileURLToPath } from 'url'; // No topo do arquivo
 import express from 'express';
 import sequelize from './config/database.js';
 import servicoRoutes from './routes/servicoRoutes.js';
@@ -7,11 +9,18 @@ import cors from 'cors';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 
 app.use(cors());
 app.use(express.json());
 app.use('/api', servicoRoutes);
-app.use('/api/servicos', servicoRoutes);
+//app.use('/api/servicos', servicoRoutes);
+
+app.use(express.static(path.join(__dirname, '../frontend/html'))); // Para servir os HTMLs diretamente
+app.use('/css', express.static(path.join(__dirname, '../frontend/css'))); // Para servir CSS
+app.use('/js', express.static(path.join(__dirname, '../frontend/js')));   // Para servir JS
 
 
 sequelize.sync().then(() => {

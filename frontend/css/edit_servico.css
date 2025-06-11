@@ -1,0 +1,201 @@
+/* frontend/css/form.css */
+
+/* Remove as setinhas dos inputs number */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Para Firefox */
+}
+
+/* Estilo geral do corpo da página (aplicado a páginas com formulário) */
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #0d1117; /* Fundo escuro principal */
+    color: #e6edf3; /* Texto claro para alto contraste */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa a altura total da viewport */
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column; /* Para empilhar o formulário e o botão de voltar */
+    line-height: 1.6;
+}
+
+/* Estilos para o formulário */
+form {
+  background-color: #161b22; /* Fundo do formulário */
+  padding: 2.5rem; /* Mais padding */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra */
+  width: 90%;
+  max-width: 650px; /* Largura um pouco maior para o formulário */
+  display: grid; /* Usa CSS Grid para o layout dos campos */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Colunas responsivas */
+  gap: 1.5rem; /* Espaçamento entre os itens da grade */
+  border: 1px solid #30363d;
+}
+
+form h1 {
+    grid-column: 1 / -1; /* Título do formulário ocupa todas as colunas */
+    margin-bottom: 2rem; /* Espaço abaixo do título */
+    text-align: center; /* Centraliza o título */
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #f0f6fc;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column; /* Coloca a label acima do input */
+}
+
+label {
+  display: block;
+  color: #c9d1d9;
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #484f58;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #0d1117;
+  color: #e6edf3;
+  box-sizing: border-box;
+}
+
+form > input[type="text"] {
+    margin-bottom: 0;
+}
+
+form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23e6edf3" height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 7l3-3 3 3h-6zm-3 6l3 3 3-3h-6z"/></svg>');
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 12px);
+  background-position-y: 50%;
+}
+
+form button[type="submit"] {
+  grid-column: 1 / -1;
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.8rem 1.8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background-color: #22272e; /* Cor do botão de submit */
+  color: #e6edf3; /* Cor do texto claro */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+form button[type="submit"]:hover {
+  background-color: #1a1e24;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Estilo do Botão "Voltar ao Menu Principal" (para páginas de formulário e tabela) --- */
+.back-to-menu-button {
+    display: block; /* Garante que ocupe seu próprio espaço para alinhamento */
+    width: 100%;
+    max-width: 250px; /* Largura máxima para o botão */
+    background-color: #007bff; /* Cor azul para este botão */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 2rem; /* Espaçamento do elemento acima */
+    box-shadow: 0 3px 10px rgba(0, 123, 255, 0.3);
+    text-align: center; /* Centraliza o texto dentro do botão */
+    align-self: center; /* CENTRALIZA O ITEM DENTRO DO CONTAINER FLEX COLUNA */
+}
+
+.back-to-menu-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.5);
+}
+
+        /* Estilos adicionais para o botão de exclusão, se desejar */
+        .delete-button {
+            background-color: #dc3545; /* Cor vermelha para exclusão */
+            margin-top: 1rem; /* Espaço entre Salvar e Excluir */
+            /* Garante que ocupe a coluna inteira no grid */
+            grid-column: 1 / -1;
+            /* Centraliza o botão dentro da coluna */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 200px; /* Mesma largura do botão de salvar */
+            padding: 0.8rem 1.8rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .delete-button:hover {
+            background-color: #c82333;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+        /* Ajuste para botões ficarem centralizados e separados no grid */
+        form button[type="submit"],
+        form button.delete-button {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+/* --- Responsividade para Formulários --- */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    form {
+        padding: 1.8rem;
+        grid-template-columns: 1fr; /* Uma coluna em telas menores para o formulário */
+    }
+
+    form h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    form input, form select, form button[type="submit"] {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .back-to-menu-button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        margin-top: 1.5rem; /* Ajuste a margem superior para telas pequenas */
+    }
+}

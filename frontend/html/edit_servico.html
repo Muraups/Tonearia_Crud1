@@ -1,0 +1,57 @@
+<!-- frontend/html/edit-servico.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor Tornearia - Editar Serviço</title>
+    <!-- Linka para o novo arquivo CSS de formulário -->
+    <link rel="stylesheet" href="../css/edit_servico.css" />
+</head>
+<body>
+    <form id="form-servico-edicao">
+        <h1>EDITAR ORDEM DE SERVIÇO</h1>
+
+        <!-- Campo oculto para armazenar o ID do serviço a ser editado -->
+        <input type="hidden" name="id" id="servico-id" />
+
+        <input type="text" name="cliente" id="cliente" placeholder="Cliente" required />
+        <input type="text" name="servico" id="servico" placeholder="Serviço" required />
+
+        <div class="form-group">
+            <label for="data">DATA</label>
+            <input type="date" name="data" id="data" required />
+        </div>
+
+        <div class="form-group">
+            <label for="status">STATUS</label>
+            <select name="status" id="status" required>
+                <option value="">Selecione o status</option>
+                <option value="Aberta">Aberta</option>
+                <option value="Pendente">Pendente</option>
+                <option value="Em andamento">Em andamento</option>
+                <option value="Concluído">Concluído</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="valorServico">VALOR DO SERVIÇO</label>
+            <input type="number" name="valorServico" id="valorServico" placeholder="0.00" step="0.01" />
+        </div>
+
+        <div class="form-group">
+            <label for="gasto">GASTO</label>
+            <input type="number" name="gasto" id="gasto" placeholder="0.00" step="0.01" />
+        </div>
+
+        <button type="submit">SALVAR ALTERAÇÕES</button>
+        <button type="button" id="delete-button" class="delete-button">EXCLUIR SERVIÇO</button>
+    </form>
+
+    <!-- Botão para voltar ao menu principal -->
+    <a href="index.html" class="back-to-menu-button">Voltar ao Menu Principal</a>
+
+    <!-- Linka para o novo JavaScript de edição -->
+    <script src="../js/edit_servico.js"></script>
+</body>
+</html>

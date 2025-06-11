@@ -1,0 +1,44 @@
+<!-- frontend/html/view_servicos.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serviços Cadastrados</title>
+    <!-- Caminho para style.css: Sobe da pasta 'html' (../) para 'frontend', depois desce para 'css/view-servicos.css' -->
+    <link rel="stylesheet" href="../css/view_servicos.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>SERVIÇOS CADASTRADOS</h1>
+
+        <div id="loading-message" class="message">Carregando serviços...</div>
+        <div id="error-message" class="message error"></div>
+        <div id="no-services-message" class="message">Nenhum serviço encontrado.</div>
+
+        <table id="servicos-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Cliente</th>
+                    <th>Serviço</th>
+                    <th>Data</th>
+                    <th>Status</th>
+                    <th>Valor do Serviço</th>
+                    <th>Gasto</th>
+                    <th>Ações</th> <!-- Nova coluna para o botão de editar -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os serviços serão inseridos aqui pelo JavaScript -->
+            </tbody>
+        </table>
+
+        <!-- O BOTÃO FOI MOVIDO PARA AQUI, ABAIXO DA TABELA NO HTML -->
+        <a href="index.html" class="back-to-menu-button">Voltar ao Menu Principal</a>
+    </div>
+
+    <!-- Caminho para view-servicos.js: Sobe da pasta 'html' (../) para 'frontend', depois desce para 'js/view-servicos.js' -->
+    <script src="../js/view-servicos.js"></script>
+</body>
+</html>

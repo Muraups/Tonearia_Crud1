@@ -1,0 +1,95 @@
+/* frontend/css/style.css - EXCLUSIVO PARA index.html */
+
+/* --- Estilos Gerais do Corpo da Página --- */
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #0d1117; /* Fundo escuro principal */
+    color: #e6edf3; /* Texto claro para alto contraste */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa a altura total da viewport */
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column; /* Para empilhar o conteúdo principal */
+    line-height: 1.6; /* Melhorar legibilidade */
+}
+
+/* --- Estilos do Container do Menu Principal (index.html) --- */
+.main-menu-container {
+    background-color: #161b22; /* Fundo do container do menu */
+    padding: 4rem; /* Mais espaçamento interno */
+    border-radius: 12px; /* Cantos mais arredondados */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* Sombra mais intensa para profundidade */
+    width: 90%;
+    max-width: 550px; /* Largura máxima ligeiramente maior */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o título e os botões */
+    border: 1px solid #30363d; /* Leve borda para separar do fundo */
+}
+
+.main-menu-container h1 {
+    text-align: center; /* Centraliza o título no menu */
+    margin-bottom: 3rem; /* Mais espaço abaixo do título */
+    font-size: 2.8rem; /* Título maior */
+    font-weight: 700; /* Mais negrito */
+    line-height: 1.2;
+    background: linear-gradient(90deg, #b9bec5, #ffffff, #b9bec5); /* Gradiente no título em tons de preto */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -0.05em; /* Ajuste mais agressivo */
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem; /* Espaçamento entre os botões */
+    width: 100%;
+}
+
+.menu-button {
+    display: block; /* Ocupa a largura total */
+    padding: 1.2rem 2.5rem; /* Padding maior para botões */
+    font-size: 1.2rem; /* Texto do botão maior */
+    font-weight: 600;
+    border: none;
+    border-radius: 10px; /* Cantos arredondados */
+    background: #1a1e24; 
+    color: #e6edf3; /* Cor do texto claro */
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Sombra para o botão (mais fraca) */
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2); /* Sombra no texto */
+}
+
+.menu-button:hover {
+    background: #0d0e11; 
+    transform: translateY(-3px); /* Efeito de "levantar" mais pronunciado */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25); /* Sombra mais forte no hover (mais fraca) */
+}
+
+/* --- Responsividade para o Menu Principal --- */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    .main-menu-container {
+        padding: 2.5rem;
+    }
+
+    .main-menu-container h1 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .menu-button {
+        font-size: 1rem;
+        padding: 1rem 1.8rem;
+    }
+}

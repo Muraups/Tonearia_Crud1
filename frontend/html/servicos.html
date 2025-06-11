@@ -1,33 +1,20 @@
+<!-- frontend/html/novo-servico.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gestor Tornearia</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Gestor Tornearia - Novo Serviço</title>
+    <!-- Caminho para style.css: Sobe da pasta 'html' (../) para 'frontend', depois desce para 'css/style.css' -->
+    <link rel="stylesheet" href="../css/servicos.css" />
 </head>
 <body>
     <form id="form-servico">
         <h1>NOVA ORDEM DE SERVIÇO</h1>
 
-        <div class="form-group">
-            <label for="cliente">CLIENTE</label>
-            <select name="cliente" id="cliente" required>
-                <option value="">Selecione o Cliente</option>
-                <option value="Empresa Gamma">Empresa Gamma</option>
-                <option value="Outro Cliente">Outro Cliente</option>
-            </select>
-        </div>
+        <input type="text" name="cliente" id="cliente" placeholder="Cliente" required />
 
-        <div class="form-group">
-            <label for="servico">SERVIÇO</label>
-            <select name="servico" id="servico" required>
-                <option value="">Selecione o Serviço</option>
-                <option value="Fresagem de peça">Fresagem de peça</option>
-                <option value="Torneamento">Torneamento</option>
-                <option value="Soldagem">Soldagem</option>
-            </select>
-        </div>
+        <input type="text" name="servico" id="servico" placeholder="Serviço" required />
 
         <div class="form-group">
             <label for="data">DATA</label>
@@ -56,8 +43,14 @@
         </div>
 
         <button type="submit">CRIAR OS</button>
+        <!-- O botão duplicado "CRIAR OS" foi removido -->
     </form>
 
-    <script src="script.js"></script>
+    <!-- Botão para voltar ao menu principal -->
+    <!-- Como novo-servico.html e index.html estão na mesma pasta 'html', o caminho é direto -->
+    <a href="index.html" class="back-to-menu-button">Voltar ao Menu Principal</a>
+
+    <!-- Caminho para script.js: Sobe da pasta 'html' (../) para 'frontend', depois desce para 'js/script.js' -->
+    <script src="../js/servicos.js"></script>
 </body>
 </html>
