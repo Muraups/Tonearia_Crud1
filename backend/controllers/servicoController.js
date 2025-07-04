@@ -53,7 +53,6 @@ export const atualizarServico = async (req, res) => {
     }
 };
 
-// Nova função para deletar um serviço
 export const deletarServico = async (req, res) => {
     try {
         const { id } = req.params;

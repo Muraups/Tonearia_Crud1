@@ -1,6 +1,6 @@
 // backend/server.js
-import path from 'path'; // No topo do arquivo
-import { fileURLToPath } from 'url'; // No topo do arquivo
+import path from 'path'; 
+import { fileURLToPath } from 'url'; 
 import express from 'express';
 import sequelize from './config/database.js';
 import servicoRoutes from './routes/servicoRoutes.js';
@@ -16,7 +16,6 @@ const __dirname = path.dirname(__filename);
 app.use(cors());
 app.use(express.json());
 app.use('/api', servicoRoutes);
-//app.use('/api/servicos', servicoRoutes);
 
 app.use(express.static(path.join(__dirname, '../frontend/html'))); // Para servir os HTMLs diretamente
 app.use('/css', express.static(path.join(__dirname, '../frontend/css'))); // Para servir CSS

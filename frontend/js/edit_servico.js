@@ -57,7 +57,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     carregarServicoParaEdicao(servicoId);
 
-    // Listener para o envio do formulário de atualização
     formServicoEdicao.addEventListener('submit', async (e) => {
         e.preventDefault();
 
@@ -96,7 +95,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
-    // NOVO: Listener para o botão de exclusão
     deleteButton.addEventListener('click', async () => {
         if (confirm('Tem certeza que deseja EXCLUIR este serviço? Esta ação é irreversível.')) {
             try {

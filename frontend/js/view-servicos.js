@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const noServicesMessage = document.getElementById('no-services-message');
     const servicosTableBody = document.querySelector('#servicos-table tbody');
 
-    // Função assíncrona para buscar os serviços do backend
     const fetchServices = async () => {
         loadingMessage.style.display = 'block'; // Mostra mensagem de carregamento
         errorMessage.style.display = 'none';    // Esconde mensagem de erro
@@ -14,8 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         servicosTableBody.innerHTML = '';       // Limpa a tabela antes de carregar novos dados
 
         try {
-            // URL do backend para buscar todos os serviços
-            const apiUrl = 'http://localhost:3000/api/servicos'; // ATUALIZE ESTA LINHA COM A URL CORRETA DO SEU BACKEND
+            const apiUrl = 'http://localhost:3000/api/servicos'; 
 
             const response = await fetch(apiUrl);
 
@@ -32,11 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 return; // Sai da função se não houver serviços
             }
 
-            // Itera sobre os serviços e cria linhas na tabela
             servicos.forEach(servico => {
                 const row = servicosTableBody.insertRow(); // Insere uma nova linha na tabela
 
-                // Insere células com os dados de cada serviço
                 row.insertCell().textContent = servico.id || 'N/A';
                 row.insertCell().textContent = servico.cliente || 'N/A';
                 row.insertCell().textContent = servico.servico || 'N/A';
@@ -45,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 row.insertCell().textContent = `R$ ${parseFloat(servico.valorServico || 0).toFixed(2).replace('.', ',')}`;
                 row.insertCell().textContent = `R$ ${parseFloat(servico.gasto || 0).toFixed(2).replace('.', ',')}`;
 
-                // Adiciona a célula para o botão de ações
                 const acoesCell = row.insertCell();
                 const editButton = document.createElement('a');
                 editButton.onclick = () => console.log('Editando serviço com ID:', servico.id);                
@@ -62,6 +57,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Chama a função para buscar e exibir os serviços quando a página é carregada
     fetchServices();
 });

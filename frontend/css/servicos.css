@@ -1,18 +1,16 @@
-/* frontend/css/style.css */
-
 /* --- Estilos Gerais --- */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background-color: #0d1117; /* Fundo escuro */
-    color: #c9d1d9; /* Texto claro */
+    background-color: #0d1117; 
+    color: #c9d1d9; 
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ocupa a altura total da viewport */
+    min-height: 100vh; 
     padding: 20px;
     box-sizing: border-box;
-    flex-direction: column; /* Para empilhar o conteúdo principal e o botão de voltar */
+    flex-direction: column; 
 }
 
 h1 {
@@ -29,15 +27,15 @@ h1 {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     width: 90%;
-    max-width: 500px; /* Largura máxima para o container do menu */
+    max-width: 500px; 
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza o título e os botões */
+    align-items: center; 
 }
 
 .main-menu-container h1 {
-    text-align: center; /* Centraliza o título no menu */
+    text-align: center; 
     margin-bottom: 2.5rem;
     font-size: 2.2rem;
 }
@@ -45,31 +43,31 @@ h1 {
 .button-group {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; /* Espaçamento entre os botões */
+    gap: 1.5rem; 
     width: 100%;
 }
 
 .menu-button {
-    display: block; /* Ocupa a largura total */
+    display: block; 
     padding: 1rem 2rem;
     font-size: 1.1rem;
     font-weight: 600;
     border: none;
     border-radius: 8px;
-    background-color: #238636; /* Cor verde para os botões */
+    background-color: #238636; 
     color: #fff;
-    text-decoration: none; /* Remove sublinhado padrão */
+    text-decoration: none; 
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .menu-button:hover {
     background-color: #2ea043;
-    transform: translateY(-2px); /* Efeito de "levantar" */
+    transform: translateY(-2px); 
 }
 
 /* --- Estilos do Formulário (novo-servico.html) --- */
-/* Remove as setinhas dos inputs number */
+
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -77,29 +75,29 @@ input::-webkit-outer-spin-button {
 }
 
 input[type="number"] {
-  -moz-appearance: textfield; /* Para Firefox */
+  -moz-appearance: textfield; 
 }
 
 form {
-  background-color: #161b22; /* Fundo do formulário */
+  background-color: #161b22; 
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   width: 90%;
   max-width: 600px;
-  display: grid; /* Usa CSS Grid para o layout dos campos */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colunas responsivas */
-  gap: 1.5rem; /* Espaçamento entre os itens da grade */
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 1.5rem; 
 }
 
 form h1 {
-    grid-column: 1 / -1; /* Título do formulário ocupa todas as colunas */
-    margin-bottom: 2rem; /* Espaço abaixo do título do formulário */
+    grid-column: 1 / -1; 
+    margin-bottom: 2rem; 
 }
 
 .form-group {
   display: flex;
-  flex-direction: column; /* Coloca a label acima do input */
+  flex-direction: column; 
 }
 
 label {
@@ -161,20 +159,20 @@ form button[type="submit"]:hover {
 
 /* --- Estilo do Botão "Voltar ao Menu Principal" (em novo-servico.html e view_servicos.html) --- */
 .back-to-menu-button {
-    display: block; /* Garante que ocupe seu próprio espaço para alinhamento */
+    display: block; 
     width: 100%;
-    max-width: 250px; /* Largura máxima para o botão */
-    background-color: #005ec3; /* Cor azul */
+    max-width: 250px; 
+    background-color: #005ec3; 
     color: #ffffff;
     padding: 0.75rem 1.5rem;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    margin-top: 2rem; /* Espaço da tabela */
+    margin-top: 2rem; 
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.829);
-    text-align: center; /* Centraliza o texto dentro do botão */
-    align-self: center; /* CENTRALIZA O ITEM DENTRO DO CONTAINER FLEX COLUNA */
+    text-align: center; 
+    align-self: center; 
 }
 
 .back-to-menu-button:hover {
@@ -184,28 +182,28 @@ form button[type="submit"]:hover {
 }
 
 /* --- Estilos da Tabela (view_servicos.html) --- */
-.container { /* Usado na view_servicos.html */
+.container { 
     background-color: #161b22;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     width: 90%;
-    max-width: 1000px; /* Largura máxima para a tabela */
+    max-width: 1000px; 
     text-align: center;
-    display: flex; /* Para flex-direction column abaixo */
+    display: flex; 
     flex-direction: column;
-    align-items: flex-start; /* Alinha o h1 e o botão voltar à esquerda */
+    align-items: flex-start; 
 }
 
 .container h1 {
     text-align: left;
-    width: 100%; /* Garante que o h1 ocupe a largura para alinhamento */
+    width: 100%; 
 }
 
 .container .back-to-menu-button {
-    align-self: flex-end; /* Alinha o botão de voltar à direita dentro do container */
-    margin-top: 0; /* Remove margem extra para que fique no topo direito */
-    margin-bottom: 1.5rem; /* Espaço abaixo do botão para a tabela */
+    align-self: flex-end; 
+    margin-top: 0; 
+    margin-bottom: 1.5rem; 
 }
 
 #servicos-table {
@@ -253,7 +251,7 @@ form button[type="submit"]:hover {
     color: #ff8182;
 }
 
-/* --- Responsividade Geral --- */
+
 @media (max-width: 768px) {
     .main-menu-container {
         padding: 2rem;
@@ -314,8 +312,8 @@ form button[type="submit"]:hover {
     #servicos-table {
         min-width: 500px;
     }
-    .container .back-to-menu-button { /* Ajuste o botão de voltar na view-servicos para telas pequenas */
-        align-self: center; /* Centraliza o botão */
+    .container .back-to-menu-button { 
+        align-self: center; 
         width: 100%;
         margin-bottom: 1rem;
     }

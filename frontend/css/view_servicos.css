@@ -1,78 +1,77 @@
 /* frontend/css/view-servicos.css */
 
-/* Estilo geral do corpo da página, consistente com o formulário */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background-color: #0d1117; /* Cor de fundo escura */
-    color: #c9d1d9; /* Cor do texto clara */
+    background-color: #0d1117; 
+    color: #c9d1d9; 
     display: flex;
     justify-content: center;
-    align-items: center; /* Centraliza o container horizontalmente na tela */
+    align-items: center; 
     min-height: 100vh;
     padding: 20px;
     box-sizing: border-box;
 }
 
 .container {
-    background-color: #161b22; /* Fundo do container, um pouco mais claro */
-    padding: 2.5rem; /* Mais padding interno */
+    background-color: #161b22; 
+    padding: 2.5rem; 
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra mais visível */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
     width: 90%;
-    max-width: 1100px; /* Largura máxima para a tabela */
-    text-align: center; /* Centraliza o conteúdo por padrão */
-    display: flex; /* Transforma em um container flex */
-    flex-direction: column; /* Organiza os itens em coluna */
-    align-items: center; /* CENTRALIZA OS ITENS DENTRO DA COLUNA HORIZONTALMENTE */
-    border: 1px solid #30363d; /* Leve borda para separar do fundo */
+    max-width: 1100px; 
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    border: 1px solid #30363d; 
 }
 
 h1 {
-    text-align: center; /* Centraliza o título dentro do container */
+    text-align: center; 
     color: #f0f6fc;
     margin-bottom: 2rem;
-    font-size: 2.2rem; /* Tamanho do título consistente */
-    width: 100%; /* Ocupa a largura total para centralização */
+    font-size: 2.2rem; 
+    width: 100%;
 }
 
-/* Estilo da tabela */
+
 #servicos-table {
     width: 100%;
-    border-collapse: collapse; /* Remove espaçamento entre as células da borda */
+    border-collapse: collapse; 
     margin-top: 2rem;
-    margin-bottom: 2rem; /* Adiciona margem abaixo da tabela */
-    background-color: #0d1117; /* Fundo da tabela */
+    margin-bottom: 2rem; 
+    background-color: #0d1117; 
     border-radius: 8px;
-    overflow: hidden; /* Garante que bordas arredondadas funcionem com conteúdo */
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra interna para o fundo da tabela */
+    overflow: hidden; 
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3); 
 }
 
 #servicos-table th,
 #servicos-table td {
-    border: 1px solid #2d333b; /* Cor da borda das células mais suave */
-    padding: 0.9rem; /* Mais padding */
+    border: 1px solid #2d333b; 
+    padding: 0.9rem; 
     text-align: left;
-    color: #e6edf3; /* Cor do texto consistente */
+    color: #e6edf3; 
 }
 
 #servicos-table th {
-    background-color: #22272e; /* Fundo do cabeçalho da tabela */
+    background-color: #22272e; 
     color: #f0f6fc;
-    font-weight: 700; /* Mais negrito */
+    font-weight: 700; 
     font-size: 1.05rem;
 }
 
-/* Zebra stripping para linhas alternadas */
+
 #servicos-table tbody tr:nth-child(even) {
-    background-color: #1a1e24; /* Cor mais clara para linhas pares */
+    background-color: #1a1e24; 
 }
 
 #servicos-table tbody tr:hover {
-    background-color: rgba(0, 0, 0, 0.15); /* Efeito hover suave e escuro */
+    background-color: rgba(0, 0, 0, 0.15); 
 }
 
-/* Mensagens de status (carregando, erro, sem serviços) */
+
 .message {
     margin-top: 1rem;
     padding: 0.8rem;
@@ -80,35 +79,35 @@ h1 {
     background-color: #22272e;
     color: #c9d1d9;
     text-align: center;
-    display: none; /* Escondido por padrão, JavaScript mostrará */
+    display: none; 
     font-size: 0.95rem;
     border: 1px solid #30363d;
-    width: 100%; /* Ocupa a largura total do container */
-    box-sizing: border-box; /* Garante que padding e borda não aumentem a largura */
+    width: 100%; 
+    box-sizing: border-box; 
 }
 
 .message.error {
-    background-color: #da36334d; /* Fundo vermelho para erros */
+    background-color: #da36334d; 
     color: #ff8182;
     border-color: #da3633;
 }
 
-/* --- Estilo do Botão "Voltar ao Menu Principal" --- */
+
 .back-to-menu-button {
-    display: block; /* Garante que ocupe seu próprio espaço para alinhamento */
+    display: block; 
     width: 100%;
-    max-width: 250px; /* Largura máxima para o botão */
-    background-color: #005ec3; /* Cor azul */
+    max-width: 250px; 
+    background-color: #005ec3; 
     color: #ffffff;
     padding: 0.75rem 1.5rem;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    margin-top: 2rem; /* Espaço da tabela */
+    margin-top: 2rem; 
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.829);
-    text-align: center; /* Centraliza o texto dentro do botão */
-    align-self: center; /* CENTRALIZA O ITEM DENTRO DO CONTAINER FLEX COLUNA */
+    text-align: center; 
+    align-self: center; 
 }
 
 .back-to-menu-button:hover {
@@ -118,14 +117,13 @@ h1 {
 }
 
 .edit-button{
-    text-align: center; /* Centraliza o título dentro do container */
+    text-align: center; 
     color: #f0f6fc;
     margin-bottom: 2rem;
-    font-size: 1rem; /* Tamanho do título consistente */
-    width: 100%; /* Ocupa a largura total para centralização */
+    font-size: 1rem; 
+    width: 100%; 
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 768px) {
     body {
         padding: 15px;
@@ -144,7 +142,6 @@ h1 {
         font-size: 0.85rem;
     }
 
-    /* Esconde mais colunas em telas menores para a tabela */
     #servicos-table thead th:nth-child(1), /* ID */
     #servicos-table tbody td:nth-child(1),
     #servicos-table thead th:nth-child(4), /* Data */
@@ -164,16 +161,15 @@ h1 {
     }
 }
 
-/* Força o scroll horizontal para a tabela em telas pequenas se necessário */
 @media (max-width: 600px) {
     .container {
-        overflow-x: auto; /* Permite scroll horizontal na tabela */
+        overflow-x: auto; 
     }
     #servicos-table {
-        min-width: 500px; /* Garante uma largura mínima para a tabela */
+        min-width: 500px; 
     }
-    .back-to-menu-button { /* Ajuste do botão para telas muito pequenas */
-        max-width: 100%; /* Ocupa toda a largura disponível */
-        margin-top: 1.5rem; /* Ajuste a margem superior para telas pequenas */
+    .back-to-menu-button {
+        max-width: 100%; 
+        margin-top: 1.5rem; 
     }
 }
