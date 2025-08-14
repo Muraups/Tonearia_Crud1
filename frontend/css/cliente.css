@@ -1,0 +1,221 @@
+/*---Estilos gerais---*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #0d1117; 
+    color: #c9d1d9; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column; 
+}
+
+h1 {
+    text-align: left;
+    color: #f0f6fc;
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+}
+
+/*
+.container {
+    background-color: #161b22; 
+    padding: 2.5rem; 
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+    width: 90%;
+    max-width: 1100px; 
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    border: 1px solid #30363d; 
+}
+*/
+
+form {
+  background-color: #161b22; 
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 600px;
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 1.5rem; 
+}
+
+
+/*--- Estilo do Botão voltar---*/
+.back-to-menu-button{
+display: block;
+width: 100%;
+max-width: 250px;
+background-color: #005ec3;
+color:white;
+padding: 0.6rem 1.2rem;
+border-radius: 6px;
+text-decoration: none;
+font-weight: 600;
+transition: backgorund-color 0.3s ease, transfomr 0.2s ease, box-shadow 0.3s ease;
+margin-top: 2rem;
+box-shadow: 0 3px 10px rgba(0, 0, 0, 0.829);
+text-align: center;
+align-items: center;
+}
+
+.back-to-menu-button:hover{
+    background-color: #005ec3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.199);
+}
+
+/*---Formatação dos campos---*/
+form {
+  background-color: #161b22; 
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 600px;
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 1.5rem; 
+}
+
+form h1 {
+    grid-column: 1 / -1; 
+    margin-bottom: 2rem; 
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column; 
+}
+
+label {
+  display: block;
+  color: #c9d1d9;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+
+form input{
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #30363b;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #22272e;
+    color: #c9d1d9;
+    box-sizing: border-box;
+    }
+
+form button[type="submit"] {
+  grid-column: 1 / -1;
+  display: block;
+  width: 100%;
+  max-width: 180px;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  background-color: #238636;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #2ea043;
+}
+
+
+/* --- Estilos da Tabela (view_servicos.html) --- */
+.container { 
+    background-color: #161b22;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 500px; 
+    text-align: left;
+    flex-direction: column;
+    align-items: center; 
+}
+
+
+.message {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 6px;
+    background-color: #22272e;
+    color: #c9d1d9;
+    text-align: center;
+    display: none;
+}
+
+.message.error {
+    background-color: #da36334d;
+    color: #ff8182;
+}
+
+
+@media (max-width: 768px) {
+    .main-menu-container {
+        padding: 2rem;
+    }
+
+    .main-menu-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .menu-button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    form {
+        padding: 1.5rem;
+    }
+
+    form h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    form input, form select, form button[type="submit"] {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .back-to-menu-button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+
+}
+
+@media (max-width: 600px) {
+    .container {
+        overflow-x: auto;
+    }
+    #servicos-table {
+        min-width: 500px;
+    }
+    .container .back-to-menu-button { 
+        align-self: center; 
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}

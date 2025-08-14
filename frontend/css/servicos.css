@@ -20,52 +20,6 @@ h1 {
     font-size: 1.75rem;
 }
 
-/* --- Estilos da Página Inicial (index.html) --- */
-.main-menu-container {
-    background-color: #161b22;
-    padding: 3rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    width: 90%;
-    max-width: 500px; 
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-}
-
-.main-menu-container h1 {
-    text-align: center; 
-    margin-bottom: 2.5rem;
-    font-size: 2.2rem;
-}
-
-.button-group {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem; 
-    width: 100%;
-}
-
-.menu-button {
-    display: block; 
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 8px;
-    background-color: #238636; 
-    color: #fff;
-    text-decoration: none; 
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.menu-button:hover {
-    background-color: #2ea043;
-    transform: translateY(-2px); 
-}
-
 /* --- Estilos do Formulário (novo-servico.html) --- */
 
 input::-webkit-inner-spin-button,
@@ -74,9 +28,10 @@ input::-webkit-outer-spin-button {
   margin: 0;
 }
 
+/*
 input[type="number"] {
   -moz-appearance: textfield; 
-}
+}*/
 
 form {
   background-color: #161b22; 
