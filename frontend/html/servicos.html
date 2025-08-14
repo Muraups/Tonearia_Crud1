@@ -1,4 +1,3 @@
-<!-- frontend/html/novo-servico.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -11,7 +10,12 @@
     <form id="form-servico">
         <h1>NOVA ORDEM DE SERVIÇO</h1>
 
-        <input type="text" name="cliente" id="cliente" placeholder="Cliente" required />
+        <div class="form-group">
+            <label for="clienteId">CLIENTE</label>
+            <select name="clienteId" id="clienteId" required>
+                <option value="">Carregando clientes...</option>
+            </select>
+        </div>
 
         <input type="text" name="servico" id="servico" placeholder="Serviço" required />
 
@@ -46,6 +50,5 @@
 
     <a href="index.html" class="back-to-menu-button">Voltar ao Menu Principal</a>
 
-    <script src="../js/servicos.js"></script>
-</body>
+    <script src="../js/servicos.js"></script> </body>
 </html>

@@ -1,8 +1,8 @@
-// backend/controllers/servicoController.js
-import Servico from '../models/servico.js';
+import { Servico, Cliente } from '../models/index.js'; // Importa de models/index.js
 
 export const criarServico = async (req, res) => {
     try {
+        // Agora esperamos um 'clienteId' no corpo da requisição
         const novoServico = await Servico.create(req.body);
         res.status(201).json(novoServico);
     } catch (error) {
@@ -13,6 +13,11 @@ export const criarServico = async (req, res) => {
 export const listarServicos = async (req, res) => {
     try {
         const servicos = await Servico.findAll({
+            include: [{
+                model: Cliente,
+                as: 'cliente', // Este 'as' deve corresponder ao definido na associação
+                attributes: ['nome'] // Pega apenas o nome do cliente
+            }],
             order: [['createdAt', 'DESC']]
         });
         res.json(servicos);
@@ -24,7 +29,14 @@ export const listarServicos = async (req, res) => {
 export const buscarServicoPorId = async (req, res) => {
     try {
         const { id } = req.params;
-        const servico = await Servico.findByPk(id);
+        const servico = await Servico.findByPk(id, {
+            include: [{
+                model: Cliente,
+                as: 'cliente',
+                attributes: ['id', 'nome'] // Inclui o cliente associado
+            }]
+            // Aqui você pode incluir outros modelos como Materiais também
+        });
 
         if (!servico) {
             return res.status(404).json({ mensagem: 'Serviço não encontrado' });
