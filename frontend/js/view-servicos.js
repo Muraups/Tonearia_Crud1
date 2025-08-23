@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         servicosTableBody.innerHTML = '';
 
         try {
-            const apiUrl = '/api/servicos';
+            const apiUrl = 'http://localhost:3000/api/servicos';
             const response = await fetch(apiUrl);
             if (!response.ok) throw new Error(`Erro HTTP! Status: ${response.status}`);
             
